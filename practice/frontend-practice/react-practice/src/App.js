@@ -6,7 +6,15 @@ function Header(props) {
   return (
     <header>
       <h1>
-        <a href="/">{props.title}</a>
+        <a
+          href="/"
+          onCnlick={(event) => {
+            event.preventDefault();
+            props.onChangemode();
+          }}
+        >
+          {props.title}
+        </a>
       </h1>
     </header>
   );
@@ -18,7 +26,15 @@ function Nav(props) {
     let t = props.topics[i];
     lis.push(
       <li key={t.id}>
-        <a href={"/read/" + t.id}>{t.title}</a>
+        <a
+          onCnlick={function (event) {
+            event.preventDefault();
+            alert(t.title);
+          }}
+          href={"/read/" + t.id}
+        >
+          {t.title}
+        </a>
       </li>
     );
   }
@@ -47,7 +63,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header title="WEB"></Header>
+      <Header
+        title="WEB"
+        onChangemode={function () {
+          art("Header");
+        }}
+      ></Header>
       <Nav topics={topics}></Nav>
       <Article title="Welcome" body="Hello, Web"></Article>
     </div>
