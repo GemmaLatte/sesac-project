@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-image: url("Home.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #chat-box {
+        position: sticky;
+        top: 200px;
+        left: 1000px;
+        width: 500px;
+        height: 500px;
+        background-color: rgba(90, 85, 84, 0.5); /* #5a5554 색의 반투명 */
+        padding: 10px;
+        overflow: auto;
+        border-radius: 15px; /* 모서리 둥글게 */
+      }
+
+      #chat-list {
+        position: sticky;
+        top: 50px;
+        left: 10px;
+        width: 150px;
+        height: 500px;
+        background-color: rgba(255, 255, 255, 0.5); /* 반투명 하얀색 */
+        padding: 10px;
+        overflow: auto;
+        border-radius: 15px; /* 모서리 둥글게 */
+      }
+
+      #message-input {
+        width: 75%;
+        position: absolute;
+        bottom: 10px;
+      }
+
+      #Yuna-image {
+        position: static;
+        max-width: 50%;
+        top: 500px;
+        left: 10px;
+        width: 100vh; 
+        height : 100vw;
+      }
+
+      #profile {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="profile">P</div>
+    <!-- 프로필 추가 -->
+    <h1 id="chat-title">Chat Yuna</h1>
+    <div id="chat-container">
+      <div id="chat-box">
+        <p>시작 메시지입니다.</p>
+        <input type="text" id="user-input" placeholder="메세지를 입력하세요." />
+
+        <button type="submit" id="send-button">보내기</button>
+      </div>
+      <div id="chat-list">
+        <p>채팅방 1</p>
+      </div>
+      <div id="chat-container">
+    <img id="Yuna-image" src="Yuna.png" alt="Yuna-image"/>
+      <footer>
+        <p>Saltlux © 2024</p>
+      </footer>
+    </div>
+  </body>
+</html>
